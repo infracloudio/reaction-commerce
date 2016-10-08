@@ -76,14 +76,14 @@ def get_cloud_details(rancher_cloud):
     return data[rancher_cloud]
 
 if __name__ == "__main__":
-    rancher_url = sys.argv[1]
-    host_url = sys.argv[2]
-    email = sys.argv[3]
-    password = sys.argv[4]
-    rancher_cloud = sys.argv[5]
+    email = sys.argv[1]
+    password = sys.argv[2]
+    rancher_cloud = sys.argv[3]
 
-    cloud_details = get_cloud_details(rancher_cloud)
-    account_id = cloud_details['account_id']
+    data = get_cloud_details(rancher_cloud)
+    account_id = data['account_id']
+    rancher_url = data['rancher_url']
+    host_url = data['host_url']
 
     referer = "{0}/env/{1}/kubernetes/apply?kind=".format(rancher_url,
                                                           account_id)
@@ -99,7 +99,7 @@ if __name__ == "__main__":
     controller_data = set_environment_values(controller_data, email, password,
                                              host_url, True)
 
-    headers = set_headers(cloud_details['headers'], rancher_url)
+    headers = set_headers(data['headers'], rancher_url)
 
     headers['Referer'] = referer+"ReplicationController"
     create_controller(url, headers, controller_data, auth)

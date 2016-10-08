@@ -13,6 +13,8 @@ AWS:
         x-api-csrf: "EDEBE317184BD74E4E8790BABCA9813B"
         x-api-no-challenge: True
     account_id: 1a5
+    rancher_url: http://52.52.136.5:8080
+    host_url: http://54.183.189.68
 
 DigitalOcean:
     headers:
@@ -26,3 +28,5 @@ DigitalOcean:
         x-api-csrf: "3A4E22935B92935717DFF9F2DE34DFAE"
         x-api-no-challenge: True
     account_id: 1a29
+    rancher_url: http://139.59.3.12:8080
+    host_url: http://139.59.2.64
