@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: reaction-service
+  namespace: default
+spec:
+  ports:
+  - name: reactioncommerce
+    nodePort: 30822
+    port: ${PORT}
+    protocol: TCP
+    targetPort: ${PORT}
+  selector:
+    name: reaction-controller
+  type: NodePort

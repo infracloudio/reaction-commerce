@@ -1,0 +1,35 @@
+.catalog:
+  name: "Reaction-Commerce"
+  version: "1.0.0"
+  description: ""
+  questions:
+    - variable: "ROOT_URL"
+      label: "Root URL"
+      required: true
+      default: "http://139.59.2.64:30822"
+      type: "string"
+    - variable: "MONGO_URL"
+      label: "Mongo URL"
+      required: true
+      type: "string"
+      default: mongodb://localhost:27017/reaction
+    - variable: "REACTION_EMAIL"
+      label: "Valid email address"
+      required: true
+      default:
+      type: "string"
+    - variable: "REACTION_AUTH"
+      label: "Password for entered email"
+      required: true
+      default:
+      type: "password"
+    - variable: "REACTION_USER"
+      label: "Username for reaction UI"
+      required: true
+      type: "string"
+      default: admin
+    - variable: "PORT"
+      label: Port on which Reaction should listen
+      default: 80
+      required: true
+      type: int

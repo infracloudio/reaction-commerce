@@ -1,0 +1,28 @@
+access_key: BA248DD81C718DA9E389
+decrypt_key: reaction!@#
+
+AWS:
+    headers:
+        Accept: application/json
+        Accept-Encoding: "gzip, deflate"
+        Accept-Language: "en-GB,en-US;q=0.8,en;q=0.6"
+        Connection: keep-alive
+        Content-Type: "application/json"
+        Host:
+        Origin:
+        x-api-csrf: "EDEBE317184BD74E4E8790BABCA9813B"
+        x-api-no-challenge: True
+    account_id: 1a5
+
+DigitalOcean:
+    headers:
+        Accept: application/json
+        Accept-Encoding: "gzip, deflate"
+        Accept-Language: "en-GB,en-US;q=0.8,en;q=0.6"
+        Connection: keep-alive
+        Content-Type: "application/json"
+        Host:
+        Origin:
+        x-api-csrf: "3A4E22935B92935717DFF9F2DE34DFAE"
+        x-api-no-challenge: True
+    account_id: 1a29
