@@ -20,12 +20,12 @@ spec:
         imagePullPolicy: Always
         name: "reaction-controller"
         ports:
-        - containerPort: ${PORT}
+        - containerPort: 80
         env:
         - name: ROOT_URL
           value: ${ROOT_URL}
         - name: MONGO_URL
-          value: ${MONGO_URL}
+          value: mongodb://mongo-service:27017/reaction
         - name: MAIL_URL
           value: "smtp://${REACTION_EMAIL}:${REACTION_AUTH}@smtp.gmail.com:465"
         - name: REACTION_USER
@@ -37,12 +37,6 @@ spec:
         volumeMounts:
         - name: mongo-data
           mountPath: /data/db
-      - name: mongo
-        image: mongo
-        command:
-        - mongod
-        - --storageEngine=wiredTiger
-        imagePullPolicy: Always
       volumes:
       - name: mongo-data
         emptyDir: {}
